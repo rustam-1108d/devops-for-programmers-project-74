@@ -6,3 +6,5 @@ compose-test:
 
 compose-dev:
 	docker-compose up
+
+ci: compose-test
