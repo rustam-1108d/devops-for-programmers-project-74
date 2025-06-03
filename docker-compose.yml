@@ -1,5 +1,6 @@
 services:
   app:
+    image: rustam2/devops-for-programmers-project-74
     build:
       context: .
       dockerfile: Dockerfile.production
