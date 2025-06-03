@@ -5,8 +5,6 @@ services:
       dockerfile: Dockerfile
     container_name: blog-test
     working_dir: /app
-    volumes:
-      - ./app:/app
     environment:
       - NODE_ENV=test
     command: make test
