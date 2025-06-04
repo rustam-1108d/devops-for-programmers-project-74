@@ -7,4 +7,7 @@ compose-test:
 compose-dev:
 	docker compose up
 
-ci: compose-test
+ci: ensure-env compose-test
+
+ensure-env:
+	@test -f .env || cp .env.example .env
