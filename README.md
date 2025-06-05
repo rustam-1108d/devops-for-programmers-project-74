@@ -62,3 +62,17 @@ docker run --rm -it -p 8080:8080 -e NODE_ENV=development rustam2/devops-for-prog
 ```
 
 The application will be available at [http://localhost:8080](http://localhost:8080)
+
+### Platform Compatibility
+
+If you're using a Mac with Apple Silicon (e.g., M1/M2), you may need to explicitly specify the platform using the `--platform` flag to avoid architecture mismatches:
+
+```bash
+docker run --rm -it \
+  --platform=linux/amd64 \
+  -p 8080:8080 \
+  -e NODE_ENV=development \
+  rustam2/devops-for-programmers-project-74 make dev
+```
+
+> This tells Docker to emulate an AMD64 architecture, which is required for images not built for ARM64.
